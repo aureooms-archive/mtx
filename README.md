@@ -81,7 +81,7 @@ Currently supported urls are:
 
   1. install dependencies
 
-## `install <module>`
+### `mtx install <module>`
 
   1. install module as a dependency
 
@@ -89,17 +89,11 @@ Currently supported urls are:
 
   1. remove a dependency
 
-### `mtx bundle`
+### `mtx update`
 
-Bundle all types of content files into a small number of files. Can be used to
-make an archive of the project, share the project with peers, continue to work
-without `mtx`, etc.
+Updates dependencies.
 
-### `mtx archive [<archiver>]`
-
-Bundles then compress the folder. Uses `zip` by default.
-
-## `mtx build [<**options>]`
+### `mtx build [<**options>]`
 
 Requires at least text files to be defined:
 
@@ -112,11 +106,17 @@ Requires at least text files to be defined:
 The `<**options>` arguments override the configuration found in the
 `latex.json` file.
 
-## `mtx update`
-
-Updates dependencies.
-
-## `mtx detach <dependency>`
+### `mtx detach <dependency>`
 
 Create hard copy of dependency for modification. This removes the dependency
 from the `latex.json` file.
+
+### `mtx bundle <dest> [<**options>]`
+
+Bundle all types of content files into a small number of files. Can be used to
+make an archive of the project, share the project with peers, continue to work
+without `mtx`, etc.
+
+### `mtx archive <dest> [--archiver <archiver>] [<**options>]`
+
+Bundles then compress the folder. Uses `zip` by default.

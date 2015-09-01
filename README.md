@@ -1,2 +1,2 @@
-# xtl
+# mtx
 LaTeX package manager

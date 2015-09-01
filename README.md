@@ -33,9 +33,21 @@ bibliography.
 	"compiler" : "xelatex" ,
 	"dependencies" : [ ] ,
 	"template" : "default" ,
-	"stylesheet" : { "files" : "sty" , "name" : "stylesheet" , "processor" : "default" } ,
-	"bibliography" : { "files" : "bib" , "name" : "bibliography" , "processor" : "default" } ,
-	"text" : { "files" : "tex" , "name" : "text" , "processor" : "default"} ,
+	"stylesheet" : {
+		"files" : "sty" ,
+		"name" : "stylesheet" ,
+		"processor" : "default" ,
+	} ,
+	"bibliography" : {
+		"files" : "bib" ,
+		"name" : "bibliography" ,
+		"processor" : "default" ,
+	} ,
+	"text" : {
+		"files" : "tex" ,
+		"name" : "text" ,
+		"processor" : "default" ,
+	} ,
 }
 ```
 
@@ -58,8 +70,8 @@ This `latex.json` illustrates how to declare dependencies.
 		"github:aureooms/sty-symbols-polylog#master@^1.0.0" ,
 		"github:aureooms/sty-symbols-3SUM#without-dash" ,
 		"github:aureooms/sty-symbols-k-SUM#with-dash@^1.0.0" ,
-		"github:aureooms/theorem-BSG"
-	]
+		"github:aureooms/theorem-BSG" ,
+	] ,
 }
 ```
 
@@ -117,6 +129,6 @@ Bundle all types of content files into a small number of files. Can be used to
 make an archive of the project, share the project with peers, continue to work
 without `mtx`, etc.
 
-### `mtx archive <dest> [--archiver <archiver>] [<**options>]`
+### `mtx archive <dest> [-a <archiver>] [<**options>]`
 
 Bundles then compress the folder. Uses `zip` by default.

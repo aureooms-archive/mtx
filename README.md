@@ -1,2 +1,2 @@
-# lpm
+# xtl
 LaTeX package manager

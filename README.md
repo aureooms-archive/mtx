@@ -1,6 +1,8 @@
 # mtx
 > LaTeX on crack
 
+Package manager for LaTeX.
+
 ## latex.json
 
 This files defines the properties of a module.
@@ -79,11 +81,11 @@ Currently supported urls are:
 
   1. install dependencies
 
-## `install *module*`
+## `install <module>`
 
   1. install module as a dependency
 
-### `mtx remove *module*`
+### `mtx remove <module>`
 
   1. remove a dependency
 
@@ -93,11 +95,11 @@ Bundle all types of content files into a small number of files. Can be used to
 make an archive of the project, share the project with peers, continue to work
 without `mtx`, etc.
 
-### `mtx archive [archiver]`
+### `mtx archive [<archiver>]`
 
 Bundles then compress the folder. Uses `zip` by default.
 
-## `mtx build`
+## `mtx build [<**options>]`
 
 Requires at least text files to be defined:
 
@@ -107,11 +109,14 @@ Requires at least text files to be defined:
     3. single text file (default `text.tex`)
   2. process text file with compiler of choice (default `xelatex`)
 
+The `<**options>` arguments override the configuration found in the
+`latex.json` file.
+
 ## `mtx update`
 
 Updates dependencies.
 
-## `mtx detach *dependency*`
+## `mtx detach <dependency>`
 
 Create hard copy of dependency for modification. This removes the dependency
 from the `latex.json` file.

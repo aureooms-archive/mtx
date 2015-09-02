@@ -1,4 +1,4 @@
-# mtx
+# `mtx`
 > LaTeX on crack
 
 Package manager for LaTeX.

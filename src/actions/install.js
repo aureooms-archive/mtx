@@ -1,17 +1,28 @@
 
-export function install ( ) { }
+import str from 'aureooms-js-string' ;
 
-export function remove ( ) { }
+export default async function install ( args ) {
 
-export function update ( ) { }
+	if ( args.module ) installModule( args.module ) ;
 
-export function upgrade ( ) { }
+}
 
-export function build ( ) { }
 
-export function detach ( ) { }
+async function installModule ( module ) {
 
-export function bundle ( ) { }
+	[ registry , url ] = str.split( module , ':' , 1 ) ;
 
-export function archive ( ) { }
+	switch ( module ) {
 
+		case 'github' :
+			await installGithubModule( url ) ;
+			break ;
+
+		default :
+			break ;
+
+	}
+
+	// add dependency to latex.json
+
+}

@@ -3,9 +3,9 @@
 
 Package manager for LaTeX.
 
-## latex.json
+## `latex.json`
 
-This files defines the properties of a module.
+This file defines the properties of a module.
 
 ### Type of content
 

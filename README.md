@@ -1,3 +1,9 @@
+***
+
+_Work in progress_
+
+***
+
 # `mtx`
 > LaTeX on crack
 
@@ -75,9 +81,10 @@ This `latex.json` illustrates how to declare dependencies.
 }
 ```
 
-The syntax for a dependency is `registry:path` or `url`. Currently supported
+The syntax for a dependency is `registry:uri`. Currently supported
 registries are:
 
+  - url
   - github
   - dblp
 

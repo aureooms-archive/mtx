@@ -23,10 +23,10 @@ subparsers . addParser ( 'remove' , { aliases : [ 'r' ] , addHelp : true } )
 . setDefaults ( { 'action' : remove } ) ;
 
 subparsers . addparser ( 'update' , { aliases : [ 'u' ] , addhelp : true } )
-. setdefaults ( { 'action' : update } ) ;
+. setDefaults ( { 'action' : update } ) ;
 
 subparsers . addparser ( 'upgrade' , { aliases : [ 'U' ] , addhelp : true } )
-. setdefaults ( { 'action' : upgrade } ) ;
+. setDefaults ( { 'action' : upgrade } ) ;
 
 subparsers . addParser ( 'build' , { aliases : [ 'b' ] , addHelp : true } )
 . setDefaults ( { 'action' : build } ) ;

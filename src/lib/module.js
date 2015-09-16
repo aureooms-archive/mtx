@@ -17,6 +17,10 @@ class Module {
 	get url ( ) {
 		throw new Error( 'not implemented' ) ;
 	}
+
+	get directory ( ) {
+		throw new Error( 'not implemented' ) ;
+	}
 }
 
 class URLModule extends Module {
@@ -24,6 +28,10 @@ class URLModule extends Module {
 	constructor ( url ) {
 		super( 'url' ) ;
 		this.url = url ;
+	}
+
+	get directory ( ) {
+		return `./latex_modules/url/${escape(this.url)}` ;
 	}
 
 }
@@ -41,6 +49,10 @@ class GitHubModule extends Module {
 		return `https://github.com/${this.username}/${this.repository}/archive/${this.at}.zip` ;
 	}
 
+	get directory ( ) {
+		return `./latex_modules/github/${this.username}/${this.repository}` ;
+	}
+
 }
 
 class DBLPModule extends Module {
@@ -52,6 +64,10 @@ class DBLPModule extends Module {
 
 	get url ( ) {
 		return `http://dblp.uni-trier.de/rec/bib2/${this.uri}.bib` ;
+	}
+
+	get directory ( ) {
+		return `./latex_modules/dblp/${escape(this.uri)}` ;
 	}
 
 }

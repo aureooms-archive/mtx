@@ -1,7 +1,7 @@
 
 class Setup {
 
-	setup ( directory ) {
+	setup ( module ) {
 		throw new Error( 'Not implemented' ) ;
 	}
 
@@ -9,7 +9,7 @@ class Setup {
 
 class URLSetup extends Setup {
 
-	setup ( directory ) {
+	setup ( module ) {
 		// generate a latex.json file
 		// depending on the type of the module
 	}
@@ -18,7 +18,7 @@ class URLSetup extends Setup {
 
 class DBLPSetup extends Setup {
 
-	setup ( directory ) {
+	setup ( module ) {
 		// generate a latex.json file
 		// for a bib only module
 	}
@@ -27,7 +27,7 @@ class DBLPSetup extends Setup {
 
 class GitHubSetup extends Setup {
 
-	setup ( directory ) {
+	setup ( module ) {
 		// there should be nothing to do
 	}
 

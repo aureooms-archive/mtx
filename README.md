@@ -96,23 +96,27 @@ Currently supported urls are:
 
 ## actions
 
-### `mtx install`
+### `mtx i|install`
 
   1. install dependencies
 
-### `mtx install <module>`
+### `mtx i|install <module>`
 
   1. install module as a dependency
 
-### `mtx remove <module>`
+### `mtx r|remove <module>`
 
   1. remove a dependency
 
-### `mtx update`
+### `mtx u|update [<module>]`
 
 Updates dependencies.
 
-### `mtx build [<**options>]`
+### `mtx U|upgrade [<module>]`
+
+Upgrades dependencies.
+
+### `mtx b|build [<**options>]`
 
 Requires at least text files to be defined:
 
@@ -125,17 +129,17 @@ Requires at least text files to be defined:
 The `<**options>` arguments override the configuration found in the
 `latex.json` file.
 
-### `mtx detach <dependency>`
+### `mtx D|detach <dependency>`
 
 Create hard copy of dependency for modification. This removes the dependency
 from the `latex.json` file.
 
-### `mtx bundle <dest> [<**options>]`
+### `mtx B|bundle <dest> [<**options>]`
 
 Bundle all types of content files into a small number of files. Can be used to
 make an archive of the project, share the project with peers, continue to work
 without `mtx`, etc.
 
-### `mtx archive <dest> [-a <archiver>] [<**options>]`
+### `mtx A|archive <dest> [-a <archiver>] [<**options>]`
 
 Bundles then compress the folder. Uses `zip` by default.
